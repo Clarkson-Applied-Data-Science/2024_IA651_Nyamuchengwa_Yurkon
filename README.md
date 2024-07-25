@@ -104,6 +104,13 @@ Heart rate and blod sugar as well as body temperature
 ### Pairplot
 
 ![alt text](image-6.png)
+
+•	Blood pressure metrics (SystolicBP and DiastolicBP) appear to be key indicators of risk level, with higher values correlating with higher risk.
+
+•	Age, BodyTemp, BS, and HeartRate show less clear differentiation among the risk levels, suggesting that they may not be as strong individual predictors of risk.
+
+•	The overlapping distributions in several variables indicate that a combination of factors, rather than any single variable, might be necessary for accurate risk prediction.
+
  
 ## Model Development
 ### Train test split (Purpose)
