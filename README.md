@@ -59,8 +59,9 @@ Feature Importance: Analyze which features contribute most to the predictions.
 Learning Curve
 
 ## Data Visualization
-#![summary](https://github.com/user-attachments/assets/5dac7cd0-9d1d-4131-b8c4-98bbfc136b18)
+
 ## Summary Statistics
+#![summary](https://github.com/user-attachments/assets/5dac7cd0-9d1d-4131-b8c4-98bbfc136b18)
 
 ### Interpretation of the Histograms:
 
