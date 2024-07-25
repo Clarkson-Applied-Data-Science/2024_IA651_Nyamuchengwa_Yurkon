@@ -7,7 +7,7 @@ Maternal health remains a crucial concern in global health, particularly in unde
 Create a machine learning model to forecast maternal health risk levels using key physiological indicators. 
 Enable early detection of potential health risks in expectant mothers, facilitating timely and appropriate medical interventions to improve health outcomes for both mothers and infants.
 ## Dataset
-Data was downloaded on  Datasets - UCI Machine Learning Repository. https://archive.ics.uci.edu/dataset/863/maternal+health+risk  .The dataset has 720 rows and 7 Variables and has no missing values
+Data was downloaded on  Datasets - UCI Machine Learning Repository. https://archive.ics.uci.edu/dataset/863/maternal+health+risk  .The dataset has 1013 instances and 7 Variables and has no missing values
 ### Variables
 Age                                                                   
 The age of the expectant mother in years.
@@ -117,6 +117,9 @@ Heart rate and blod sugar as well as body temperature
 Assessing model performance on unseen data.
 Preventing overfitting and ensuring generalization.
 Providing an unbiased evaluation during model selection and hyperparameter tuning.
+#### Training shape:
+Training set size: 640
+Testing set size: 161
 ### Models Employed
 decision trees
 Random forests 
