@@ -163,6 +163,14 @@ Testing Accuracy: Slightly higher than SVM (0.8333 vs. 0.8056), indicating it ge
 
 ### Learning curve
 ![alt text](image-8.png)
+
+Overfitting: The high training score and lower cross-validation score suggest that the Random Forest model may be overfitting. The model learns the training data very well but struggles to generalize to new data.
+
+Improvement with More Data: The cross-validation score improves as the number of training examples increases, indicating that the model benefits from more training data.
+
+Potential Ceiling: The plateau in the cross-validation score suggests a potential ceiling in model performance, which might indicate the need for model tuning or the addition of more informative features.
+
+
  
 
 
