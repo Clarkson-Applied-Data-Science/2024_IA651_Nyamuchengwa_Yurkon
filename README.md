@@ -1,5 +1,5 @@
 # 2024_IA651_Nyamuchengwa_Yurkon
-# Predictive Analysis of martenal health risk levels usin machine learning
+# Predictive Analysis of martenal health risk levels using machine learning
 ## Background
 Maternal health remains a crucial concern in global health, particularly in under-resourced areas where the rates of maternal mortality are alarmingly high. Early detection and management of maternal health risks are vital in preventing complications that can jeopardize the health of both mothers and their infants. Utilizing machine learning techniques can lead to more accurate predictions, improved allocation of healthcare resources, and timely medical interventions, ultimately enhancing the quality of maternal care and reducing adverse outcomes.
 
