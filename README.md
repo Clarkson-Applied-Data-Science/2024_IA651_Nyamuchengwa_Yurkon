@@ -185,25 +185,10 @@ C': [0.1, 1, 10, 100, 1000],
 gamma': [1, 0.1, 0.01, 0.001, 0.0001],
 kernel': ['linear', 'rbf', 'poly', 'sigmoid']
 
-#### 
-Classification Report for SVM:
-              precision    recall  f1-score   support
-
-   high risk       0.84      0.84      0.84        19
-    low risk       0.79      0.81      0.80        79
-    mid risk       0.80      0.78      0.79        63
-
-    accuracy                           0.80       161
-   macro avg       0.81      0.81      0.81       161
-weighted avg       0.80      0.80      0.80       161
-
-Confusion Matrix for SVM:
-[[16  3  0]
- [ 3 64 12]
- [ 0 14 49]]
-
 
 Perfomance metrics and classification report :
+
+![CaptureSS](https://github.com/user-attachments/assets/30d6d134-9c05-4fc8-a153-8d2569ee7806)
        
 High Risk Class: The model performs well with high precision and recall, indicating it correctly identifies most high-risk instances.
 Low Risk Class: The model shows slightly lower precision compared to high-risk, but recall is high, meaning it can identify most low-risk instances.
