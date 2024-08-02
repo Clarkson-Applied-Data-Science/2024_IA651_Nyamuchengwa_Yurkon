@@ -146,10 +146,34 @@ min_samples_leaf [1, 2, 4]. Defines the minimum number of samples that a leaf no
 The perfomance metrics and classification reports are as follows
 
 
+Evaluating decision_tree...
+Classification Report for decision_tree:
+              precision    recall  f1-score   support
+
+   high risk       0.94      0.84      0.89        19
+    low risk       0.70      0.68      0.69        79
+    mid risk       0.64      0.68      0.66        63
+
+    accuracy                           0.70       161
+   macro avg       0.76      0.74      0.75       161
+weighted avg       0.71      0.70      0.70       161
+
+Confusion Matrix for decision_tree:
+[[16  3  0]
+ [ 1 54 24]
+ [ 0 20 43]]
+
+
+
+
+
+
+
+
                   precision  recall  f1-score   support
 
    
-   high risk       0.94      0.84      0.89        19
+     high risk     0.94      0.84      0.89        19
     
     low risk       0.70      0.68      0.69        79
     
