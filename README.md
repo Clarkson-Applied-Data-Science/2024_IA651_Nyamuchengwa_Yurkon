@@ -206,6 +206,11 @@ The Decision Tree shows a higher number of false negatives for "low risk" and "m
 ### Confusion Matrix
 ![image](https://github.com/user-attachments/assets/e87bc29e-36c9-4def-8d51-7f29be4a4861)
 
+## Model Limitations
+* Random Forests, being an ensemble of many Decision Trees, can become quite complex. This complexity can make it difficult to interpret and understand the contributions of individual features to the risk assessment.
+* Decision Trees can easily overfit the training data, especially if the tree is too deep or if there are too many features. This overfitting can reduce the model’s generalizability to new, unseen data.
+* SVMs can handle non-linearly separable data using the kernel trick, choosing the right kernel and its parameters can be challenging. Incorrect kernel selection might lead to suboptimal performance
+
  
 ## Model interpretability
 
