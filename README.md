@@ -160,7 +160,7 @@ The high risk class has the best performance metrics in terms of precision and F
   min_samples_leaf':[1, 2, 4, 6]
     
   The perfomance metrics and classification report:
-  ![Capture](https://github.com/user-attachments/assets/1920b975-47ca-4134-8488-46b2aa836be0,width="300")
+  ![Capture]<https://github.com/user-attachments/assets/1920b975-47ca-4134-8488-46b2aa836be0,width="300">
 
 
 The model performs quite well overall, with an accuracy of 80%.
