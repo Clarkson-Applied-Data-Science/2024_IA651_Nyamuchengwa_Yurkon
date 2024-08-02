@@ -145,7 +145,7 @@ min_samples_split [2, 5, 10]. Specifies the minimum number of samples required t
 min_samples_leaf [1, 2, 4]. Defines the minimum number of samples that a leaf node must have.
 The perfomance metrics and classification reports are as follows:
 
-![CaptureDES](https://github.com/user-attachments/assets/dcaa541f-28f9-463d-8459-568bef6d7d1a)
+![Image decisiontree](https://github.com/user-attachments/assets/86780697-9f7e-405b-9617-2a4677981aa7)
 
 
 The high risk class has the best performance metrics in terms of precision and F1-score, indicating that it is predicted with high accuracy and recall.The low risk and mid risk classes have lower precision and recall compared to the high-risk class, suggesting they are less accurately predicted.The accuracy of 0.70 shows that the model is correct 70% of the time overall.The macro average metrics suggest that the model has a balanced performance across different classes, but the weighted average indicates that performance is somewhat lower when accounting for class imbalance.Overall, the model performs better on the high-risk class compared to the other risk levels, and the F1-scores indicate a balance between precision and recall for each class.
@@ -162,7 +162,8 @@ The high risk class has the best performance metrics in terms of precision and F
   The perfomance metrics and classification report:
 
 
-![CapturR](https://github.com/user-attachments/assets/10d2b4a8-98dd-48dc-99e7-5422866f6e35)
+![Image random](https://github.com/user-attachments/assets/7c0e77c5-af29-4bbc-91ee-7400f52479a2)
+
 
 
 The model performs quite well overall, with an accuracy of 80%.
@@ -186,7 +187,8 @@ kernel': ['linear', 'rbf', 'poly', 'sigmoid']
 
 Perfomance metrics and classification report :
 
-![CaptureSS](https://github.com/user-attachments/assets/30d6d134-9c05-4fc8-a153-8d2569ee7806)
+![image svm](https://github.com/user-attachments/assets/f53c54f8-c3f1-4518-9e3e-9e30efcda51b)
+
        
 High Risk Class: The model performs well with high precision and recall, indicating it correctly identifies most high-risk instances.
 Low Risk Class: The model shows slightly lower precision compared to high-risk, but recall is high, meaning it can identify most low-risk instances.
