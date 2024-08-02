@@ -126,9 +126,9 @@ Providing an unbiased evaluation during model selection and hyperparameter tunin
 Training set size: 640
 Testing set size: 161
 ### Models Employed
-*decision trees
-*Random forests 
-*SVM
+* decision trees
+* Random forests 
+* SVM
 
 For model selection in predicting maternal health risks, we evaluated several classifiers to determine the most effective approach. The classifiers considered were:
 Decision Tree Classifier, Random Forest Classifier, Support Vector Clasifier
