@@ -144,6 +144,8 @@ min_samples_split [2, 5, 10]. Specifies the minimum number of samples required t
 
 min_samples_leaf [1, 2, 4]. Defines the minimum number of samples that a leaf node must have.
 The perfomance metrics and classification reports are as follows:
+
+
 ![Capture des](https://github.com/user-attachments/assets/08703ad7-7d8d-4f66-95c6-7ed99acd8fee)
 
 
@@ -160,7 +162,9 @@ The high risk class has the best performance metrics in terms of precision and F
   min_samples_leaf':[1, 2, 4, 6]
     
   The perfomance metrics and classification report:
-  ![Capture]<https://github.com/user-attachments/assets/1920b975-47ca-4134-8488-46b2aa836be0,width="300">
+
+  
+  ![Capture](https://github.com/user-attachments/assets/1920b975-47ca-4134-8488-46b2aa836be0)
 
 
 The model performs quite well overall, with an accuracy of 80%.
@@ -177,33 +181,51 @@ This report suggests that the model is well-balanced and performs adequately acr
  
   
 #### 3.SVM:
-C: [0.1, 1, 10],
+C': [0.1, 1, 10, 100, 1000],
+gamma': [1, 0.1, 0.01, 0.001, 0.0001],
+kernel': ['linear', 'rbf', 'poly', 'sigmoid']
 
-gamma: [1, 0.1, 0.01],
+#### 
+Classification Report for SVM:
+              precision    recall  f1-score   support
 
-kernel: ['linear', 'rbf']
+   high risk       0.84      0.84      0.84        19
+    low risk       0.79      0.81      0.80        79
+    mid risk       0.80      0.78      0.79        63
+
+    accuracy                           0.80       161
+   macro avg       0.81      0.81      0.81       161
+weighted avg       0.80      0.80      0.80       161
+
+Confusion Matrix for SVM:
+[[16  3  0]
+ [ 3 64 12]
+ [ 0 14 49]]
+
+
 Perfomance metrics and classification report :
        
-High Risk: The model performs quite well in predicting high-risk instances with high precision and recall (both 0.84), indicating that high-risk cases are identified accurately and consistently.
-Low Risk: The model has moderate performance for low-risk instances with an F1-score of 0.74. The precision is slightly higher than recall, suggesting a slight tendency to overpredict low-risk cases.
-Mid Risk: The model has a somewhat lower precision but good recall for mid-risk instances. This indicates that while mid-risk cases are identified fairly well, the model might be more cautious or conservative in its predictions.
-Overall Accuracy: The model has an overall accuracy of 75%, meaning it correctly classifies 75% of the instances in the dataset.
-Macro Average: The macro averages for precision, recall, and F1-score are all 0.77, indicating that, on average, the model performs consistently across all classes when they are given equal importance.
-Weighted Average: The weighted averages match the accuracy, suggesting that the class distribution has a balanced effect on the overall performance metrics.
-Overall, the SVM model demonstrates a good balance between precision, recall, and F1-score for each risk level. The performance metrics indicate a solid model with reasonable accuracy and balanced performance across different classes, but there is room for improvement, particularly in precision for mid-risk and low-risk categories.
+High Risk Class: The model performs well with high precision and recall, indicating it correctly identifies most high-risk instances.
+Low Risk Class: The model shows slightly lower precision compared to high-risk, but recall is high, meaning it can identify most low-risk instances.
+Mid Risk Class: The performance is moderate, with balanced precision and recall.
+The macro and weighted averages provide an overall view of the model's performance, considering the balance between precision, recall, and F1-score across all classes.
 
 ## Best model :
-### Random Forest:
-Best Overall Performance: It has the highest accuracy (0.83) and macro average F1-score (0.85), suggesting it performs well in balancing precision and recall across all classes.
+### SVM and Random Forest:
+Performance: Both SVM and Random Forest models have similar performance metrics with an accuracy of 80%. They show balanced precision, recall, and F1-scores across the classes.
+Confusion Matrix: The confusion matrices for SVM and Random Forest are identical, indicating similar performance and error patterns.SVM and Random Forest models are more effective and consistent compared to the Decision Tree model for this classification task. The Decision Tree model, while performing well in identifying "high risk" instances, shows weaknesses in classifying "low risk" and "mid risk" instances accuratel
 
+The Decision Tree model has lower accuracy (70%) and generally lower precision, recall, and F1-scores compared to SVM and Random Forest. This indicates that the Decision Tree struggles more with correctly classifying instances, particularly for the "low risk" and "mid risk" classes.
+The Decision Tree shows a higher number of false negatives for "low risk" and "mid risk" classes, suggesting it misclassifies these instances more often compared to SVM and Random Forest.
 
-Testing Accuracy: Slightly higher than SVM (0.8333 vs. 0.8056), indicating it generalizes better to unseen data compared to SVM.
 ### Confusion Matrix
-![alt text](image-7.png)
+![image](https://github.com/user-attachments/assets/e87bc29e-36c9-4def-8d51-7f29be4a4861)
+
  
 ## Model interpretability
 
-### Learning curve
+### Learning curves
+#### Random Forest
 ![alt text](image-8.png)
 
 Overfitting: The high training score and lower cross-validation score suggest that the Random Forest model may be overfitting. The model learns the training data very well but struggles to generalize to new data.
@@ -211,6 +233,9 @@ Overfitting: The high training score and lower cross-validation score suggest th
 Improvement with More Data: The cross-validation score improves as the number of training examples increases, indicating that the model benefits from more training data.
 
 Potential Ceiling: The plateau in the cross-validation score suggests a potential ceiling in model performance, which might indicate the need for model tuning or the addition of more informative features.
+
+#### SVM
+![image](https://github.com/user-attachments/assets/a138a7bb-fbc0-4b02-ab12-eafcfed25a25)
 
 ## Future Scope
 * Collect More Data:Gather more diverse data to improve model generalization.
