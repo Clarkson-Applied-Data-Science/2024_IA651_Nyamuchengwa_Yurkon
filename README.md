@@ -145,6 +145,8 @@ min_samples_split [2, 5, 10]. Specifies the minimum number of samples required t
 min_samples_leaf [1, 2, 4]. Defines the minimum number of samples that a leaf node must have.
 The perfomance metrics and classification reports are as follows:
 
+Evaluating decision_tree...
+Classification Report for decision_tree:
               precision    recall  f1-score   support
 
    high risk       0.94      0.84      0.89        19
@@ -154,6 +156,12 @@ The perfomance metrics and classification reports are as follows:
     accuracy                           0.70       161
    macro avg       0.76      0.74      0.75       161
 weighted avg       0.71      0.70      0.70       161
+
+Confusion Matrix for decision_tree:
+[[16  3  0]
+ [ 1 54 24]
+ [ 0 20 43]]
+
 
 
 
@@ -169,9 +177,9 @@ The high risk class has the best performance metrics in terms of precision and F
   min_samples_leaf':[1, 2, 4, 6]
     
   The perfomance metrics and classification report:
-  Training Accuracy for decision_tree: 0.8703
-Testing Accuracy for decision_tree: 0.7019
-
+  
+Evaluating random_forest...
+Classification Report for random_forest:
               precision    recall  f1-score   support
 
    high risk       0.84      0.84      0.84        19
@@ -181,6 +189,13 @@ Testing Accuracy for decision_tree: 0.7019
     accuracy                           0.80       161
    macro avg       0.81      0.81      0.81       161
 weighted avg       0.80      0.80      0.80       161
+
+Confusion Matrix for random_forest:
+[[16  3  0]
+ [ 3 64 12]
+ [ 0 14 49]]
+
+
 
 The model performs quite well overall, with an accuracy of 80%.
 
