@@ -1,5 +1,5 @@
-# 2024_IA651_Nyamuchengwa_Yurkon
 # Predictive Analysis of martenal health risk levels using machine learning
+## Final Project
 ## Background
 Maternal health remains a crucial concern in global health, particularly in under-resourced areas where the rates of maternal mortality are alarmingly high. Early detection and management of maternal health risks are vital in preventing complications that can jeopardize the health of both mothers and their infants. Utilizing machine learning techniques can lead to more accurate predictions, improved allocation of healthcare resources, and timely medical interventions, ultimately enhancing the quality of maternal care and reducing adverse outcomes.
 
@@ -7,7 +7,9 @@ Maternal health remains a crucial concern in global health, particularly in unde
 Create a machine learning model to forecast maternal health risk levels using key physiological indicators. 
 Enable early detection of potential health risks in expectant mothers, facilitating timely and appropriate medical interventions to improve health outcomes for both mothers and infants.
 ## Dataset
-Data was downloaded on  Datasets - UCI Machine Learning Repository. https://archive.ics.uci.edu/dataset/863/maternal+health+risk  .The dataset has 1013 instances and 7 Variables and has no missing values
+Data was downloaded on  
+Link : Datasets - UCI Machine Learning Repository. https://archive.ics.uci.edu/dataset/863/maternal+health+risk  .
+The dataset has 1013 instances and 7 Variables and has no missing values
 ### Variables
 Age                                                                   
 The age of the expectant mother in years.
@@ -65,8 +67,9 @@ Learning Curve
 
 ### Interpretation of the Histograms:
 
-![alt text](image.png)
- 
+![image](https://github.com/user-attachments/assets/265b83ac-72d2-4cdf-b58d-4d7f8ef8402b)
+Women from age group of 10-19 yeas and  20-29 years tend to have a low martenal health risk,this is attributed to the fact that younger women are often in better overall physical health and have a lower incidence of chronic diseases that can complicate pregnancy. Martenal health risk levels tends to be high from the age of 30 upto 59 because women aged 30-59 are considered to be of advanced maternal age. Pregnancy at this age can increase the risk of complications such as gestational diabetes, hypertension, preeclampsia, and chromosomal abnormalities like Down syndrome. The body’s ability to handle the physiological demands of pregnancy decreases with age.After the age of 59 the risk are low because thats the stage where women starts to reach menopause.
+
 #### Age:
 Distribution: The age distribution is skewed to the right, with most values concentrated between 10 and 40 years. This indicates that most of the subjects are younger, which is typical for maternal health datasets.
 #### Systolic Blood Pressure (SystolicBP):
