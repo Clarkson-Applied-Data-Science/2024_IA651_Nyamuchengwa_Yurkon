@@ -66,9 +66,7 @@ Learning Curve
 #![summary](https://github.com/user-attachments/assets/5dac7cd0-9d1d-4131-b8c4-98bbfc136b18)
 
 ### Interpretation of the Histograms:
-
-![image](https://github.com/user-attachments/assets/265b83ac-72d2-4cdf-b58d-4d7f8ef8402b)
-Women from age group of 10-19 yeas and  20-29 years tend to have a low martenal health risk,this is attributed to the fact that younger women are often in better overall physical health and have a lower incidence of chronic diseases that can complicate pregnancy. Martenal health risk levels tends to be high from the age of 30 upto 59 because women aged 30-59 are considered to be of advanced maternal age. Pregnancy at this age can increase the risk of complications such as gestational diabetes, hypertension, preeclampsia, and chromosomal abnormalities like Down syndrome. The body’s ability to handle the physiological demands of pregnancy decreases with age.After the age of 59 the risk are low because thats the stage where women starts to reach menopause.
+![image](https://github.com/user-attachments/assets/c4d7ff32-6fe2-440c-b7fc-eaa5617d5171)
 
 #### Age:
 Distribution: The age distribution is skewed to the right, with most values concentrated between 10 and 40 years. This indicates that most of the subjects are younger, which is typical for maternal health datasets.
@@ -83,9 +81,9 @@ Distribution: The body temperature is heavily skewed to the left, with most valu
 #### Heart Rate (HeartRate):
 Distribution: The heart rate distribution is slightly right skewed, with most values ranging from 60 to 80 beats per minute. This suggests that most subjects have heart rates within the normal range, with a few cases of elevated heart rates.
 
-![alt text](image-1.png)
- 
-Age 20-29 has high risk level. This may be due to Cultural or social norms might influence health behaviors and the likelihood of reporting or seeking treatment for maternal health issues.
+![image](https://github.com/user-attachments/assets/265b83ac-72d2-4cdf-b58d-4d7f8ef8402b)
+Women from age group of 10-19 yeas and  20-29 years tend to have a low martenal health risk,this is attributed to the fact that younger women are often in better overall physical health and have a lower incidence of chronic diseases that can complicate pregnancy. Martenal health risk levels tends to be high from the age of 30 upto 59 because women aged 30-59 are considered to be of advanced maternal age. Pregnancy at this age can increase the risk of complications such as gestational diabetes, hypertension, preeclampsia, and chromosomal abnormalities like Down syndrome. The body’s ability to handle the physiological demands of pregnancy decreases with age.After the age of 59 the risk are low because thats the stage where women starts to reach menopause.
+
 ## Outlier Detection
 
 ![alt text](image-4.png)
