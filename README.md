@@ -145,8 +145,6 @@ min_samples_split [2, 5, 10]. Specifies the minimum number of samples required t
 min_samples_leaf [1, 2, 4]. Defines the minimum number of samples that a leaf node must have.
 The perfomance metrics and classification reports are as follows:
 
-Evaluating decision_tree...
-Classification Report for decision_tree:
               precision    recall  f1-score   support
 
    high risk       0.94      0.84      0.89        19
@@ -157,24 +155,45 @@ Classification Report for decision_tree:
    macro avg       0.76      0.74      0.75       161
 weighted avg       0.71      0.70      0.70       161
 
+
+
 The high risk class has the best performance metrics in terms of precision and F1-score, indicating that it is predicted with high accuracy and recall.The low risk and mid risk classes have lower precision and recall compared to the high-risk class, suggesting they are less accurately predicted.The accuracy of 0.70 shows that the model is correct 70% of the time overall.The macro average metrics suggest that the model has a balanced performance across different classes, but the weighted average indicates that performance is somewhat lower when accounting for class imbalance.Overall, the model performs better on the high-risk class compared to the other risk levels, and the F1-scores indicate a balance between precision and recall for each class.
 
 #### 2.Random Forest:
-  n_estimators: [50, 100, 200], Specifies the number of trees in the forest.
-
-  max_depth: [None, 10, 20],
-
-  min_samples_split: [2, 5, 10],
-
-  min_samples_leaf: [1, 2, 4]
-  The perfomance metrics and classification report:
-
- 
-
-
-
-
+  n_estimators': [50, 150, 300, 500, 1000]
   
+  max_depth': [None, 15, 30, 45]
+  
+  min_samples_split': [2, 5, 10, 20]
+  
+  min_samples_leaf':[1, 2, 4, 6]
+    
+  The perfomance metrics and classification report:
+  Training Accuracy for decision_tree: 0.8703
+Testing Accuracy for decision_tree: 0.7019
+
+              precision    recall  f1-score   support
+
+   high risk       0.84      0.84      0.84        19
+    low risk       0.79      0.81      0.80        79
+    mid risk       0.80      0.78      0.79        63
+
+    accuracy                           0.80       161
+   macro avg       0.81      0.81      0.81       161
+weighted avg       0.80      0.80      0.80       161
+
+The model performs quite well overall, with an accuracy of 80%.
+
+High Risk instances are identified accurately, with high precision and recall, suggesting that the model is effective at identifying true high risk cases.
+
+Low Risk instances have a good balance of precision and recall, with slightly higher recall, meaning the model is slightly better at capturing actual low risk instances.
+
+Mid Risk instances also show balanced precision and recall, indicating a similar performance to the other classes.
+
+The macro and weighted averages indicate that the model performs consistently across all classes, without any single class dominating the performance metrics.
+
+This report suggests that the model is well-balanced and performs adequately across different risk levels. The high F1-scores indicate that the model maintains a good balance between precision and recall, which is crucial for balanced classification tasks.
+ 
   
 #### 3.SVM:
 C: [0.1, 1, 10],
