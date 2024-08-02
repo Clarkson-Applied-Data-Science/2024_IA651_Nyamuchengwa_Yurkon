@@ -112,9 +112,13 @@ Heart rate and blod sugar as well as body temperature
 
 •	The overlapping distributions in several variables indicate that a combination of factors, rather than any single variable, might be necessary for accurate risk prediction.
 
+## Feature Engineering
+Transformed categorical variables into a numerical format suitable for machine learning models.
+Label Encoding: The Risk Level.This was used as it assumes ordinal relationships between classes
  
 ## Model Development
 ### Train test split (Purpose)
+The dataset was split into 80% training and 20% testing sets to ensure a balanced dataset presentation.
 Assessing model performance on unseen data.
 Preventing overfitting and ensuring generalization.
 Providing an unbiased evaluation during model selection and hyperparameter tuning.
@@ -139,6 +143,19 @@ max_depth [3, 5, 7, 10], Limits the depth of the tree.  These values provide a b
 min_samples_split [2, 5, 10]. Specifies the minimum number of samples required to split an internal node
 
 min_samples_leaf [1, 2, 4]. Defines the minimum number of samples that a leaf node must have.
+The perfomance metrics and classification reports are as follows
+
+
+                  precision  recall  f1-score   support
+
+   high risk       0.94      0.84      0.89        19
+    low risk       0.70      0.68      0.69        79
+    mid risk       0.64      0.68      0.66        63
+
+    accuracy                           0.70       161
+   macro avg       0.76      0.74      0.75       161
+weighted avg       0.71      0.70      0.70       161
+The high risk class has the best performance metrics in terms of precision and F1-score, indicating that it is predicted with high accuracy and recall.The low risk and mid risk classes have lower precision and recall compared to the high-risk class, suggesting they are less accurately predicted.The accuracy of 0.70 shows that the model is correct 70% of the time overall.The macro average metrics suggest that the model has a balanced performance across different classes, but the weighted average indicates that performance is somewhat lower when accounting for class imbalance.Overall, the model performs better on the high-risk class compared to the other risk levels, and the F1-scores indicate a balance between precision and recall for each class.
 
 #### 2.Random Forest:
   n_estimators: [50, 100, 200], Specifies the number of trees in the forest.
@@ -148,16 +165,39 @@ min_samples_leaf [1, 2, 4]. Defines the minimum number of samples that a leaf no
   min_samples_split: [2, 5, 10],
 
   min_samples_leaf: [1, 2, 4]
+  The perfomance metrics and classification report:
+  
+  
 #### 3.SVM:
 C: [0.1, 1, 10],
 
 gamma: [1, 0.1, 0.01],
 
 kernel: ['linear', 'rbf']
+Perfomance metrics and classification report :
+                 
+                  precision  recall   f1-score   support
+
+   high risk       0.84      0.84      0.84        19
+    low risk       0.75      0.72      0.74        79
+    mid risk       0.71      0.75      0.73        63
+
+    accuracy                           0.75       161
+   macro avg       0.77      0.77      0.77       161
+weighted avg       0.75      0.75      0.75       161
+
+High Risk: The model performs quite well in predicting high-risk instances with high precision and recall (both 0.84), indicating that high-risk cases are identified accurately and consistently.
+Low Risk: The model has moderate performance for low-risk instances with an F1-score of 0.74. The precision is slightly higher than recall, suggesting a slight tendency to overpredict low-risk cases.
+Mid Risk: The model has a somewhat lower precision but good recall for mid-risk instances. This indicates that while mid-risk cases are identified fairly well, the model might be more cautious or conservative in its predictions.
+Overall Accuracy: The model has an overall accuracy of 75%, meaning it correctly classifies 75% of the instances in the dataset.
+Macro Average: The macro averages for precision, recall, and F1-score are all 0.77, indicating that, on average, the model performs consistently across all classes when they are given equal importance.
+Weighted Average: The weighted averages match the accuracy, suggesting that the class distribution has a balanced effect on the overall performance metrics.
+Overall, the SVM model demonstrates a good balance between precision, recall, and F1-score for each risk level. The performance metrics indicate a solid model with reasonable accuracy and balanced performance across different classes, but there is room for improvement, particularly in precision for mid-risk and low-risk categories.
 
 ## Best model :
 ### Random Forest:
 Best Overall Performance: It has the highest accuracy (0.83) and macro average F1-score (0.85), suggesting it performs well in balancing precision and recall across all classes.
+
 
 Testing Accuracy: Slightly higher than SVM (0.8333 vs. 0.8056), indicating it generalizes better to unseen data compared to SVM.
 ### Confusion Matrix
