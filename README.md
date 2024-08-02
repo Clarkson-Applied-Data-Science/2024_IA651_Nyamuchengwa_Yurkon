@@ -126,9 +126,10 @@ Providing an unbiased evaluation during model selection and hyperparameter tunin
 Training set size: 640
 Testing set size: 161
 ### Models Employed
-decision trees
-Random forests 
-SVM
+*decision trees
+*Random forests 
+*SVM
+
 For model selection in predicting maternal health risks, we evaluated several classifiers to determine the most effective approach. The classifiers considered were:
 Decision Tree Classifier, Random Forest Classifier, Support Vector Clasifier
 
@@ -143,8 +144,7 @@ max_depth [3, 5, 7, 10], Limits the depth of the tree.  These values provide a b
 min_samples_split [2, 5, 10]. Specifies the minimum number of samples required to split an internal node
 
 min_samples_leaf [1, 2, 4]. Defines the minimum number of samples that a leaf node must have.
-The perfomance metrics and classification reports are as follows
-
+The perfomance metrics and classification reports are as follows:
 
 Evaluating decision_tree...
 Classification Report for decision_tree:
@@ -158,33 +158,6 @@ Classification Report for decision_tree:
    macro avg       0.76      0.74      0.75       161
 weighted avg       0.71      0.70      0.70       161
 
-Confusion Matrix for decision_tree:
-[[16  3  0]
- [ 1 54 24]
- [ 0 20 43]]
-
-
-
-
-
-
-
-
-                  precision  recall  f1-score   support
-
-   
-     high risk     0.94      0.84      0.89        19
-    
-    low risk       0.70      0.68      0.69        79
-    
-    mid risk       0.64      0.68      0.66        63
-
-    accuracy                           0.70       161
-  
-   macro avg       0.76      0.74      0.75       161
- 
-  weighted avg     0.71      0.70      0.70       161
-
 The high risk class has the best performance metrics in terms of precision and F1-score, indicating that it is predicted with high accuracy and recall.The low risk and mid risk classes have lower precision and recall compared to the high-risk class, suggesting they are less accurately predicted.The accuracy of 0.70 shows that the model is correct 70% of the time overall.The macro average metrics suggest that the model has a balanced performance across different classes, but the weighted average indicates that performance is somewhat lower when accounting for class imbalance.Overall, the model performs better on the high-risk class compared to the other risk levels, and the F1-scores indicate a balance between precision and recall for each class.
 
 #### 2.Random Forest:
@@ -196,6 +169,26 @@ The high risk class has the best performance metrics in terms of precision and F
 
   min_samples_leaf: [1, 2, 4]
   The perfomance metrics and classification report:
+
+ 
+
+Evaluating random_forest...
+Classification Report for random_forest:
+              precision    recall  f1-score   support
+
+   high risk       0.84      0.84      0.84        19
+    low risk       0.79      0.80      0.79        79
+    mid risk       0.79      0.78      0.78        63
+
+    accuracy                           0.80       161
+   macro avg       0.81      0.81      0.81       161
+weighted avg       0.80      0.80      0.80       161
+
+Confusion Matrix for random_forest:
+[[16  3  0]
+ [ 3 63 13]
+ [ 0 14 49]]
+
   
   
 #### 3.SVM:
