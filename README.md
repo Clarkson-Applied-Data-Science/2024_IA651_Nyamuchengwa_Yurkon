@@ -11,25 +11,25 @@ Data was downloaded on
 Link : Datasets - UCI Machine Learning Repository. https://archive.ics.uci.edu/dataset/863/maternal+health+risk  .
 The dataset has 1013 instances and 7 Variables and has no missing values
 ### Variables
-Age                                                                   
+* Age                                                                   
 The age of the expectant mother in years.
 
-Systolic Blood Pressure (SystolicBP) 
+* Systolic Blood Pressure (SystolicBP) 
 :The pressure in the arteries when the heart beats and fills them with blood, measured in millimeters of mercury (mmHg).
 
-Diastolic Blood Pressure (Diastolic)
+* Diastolic Blood Pressure (Diastolic)
 :The pressure in the arteries when the heart rests between beats, measured in millimeters of mercury (mmHg)
 
-Blood Sugar (BS) 
+* Blood Sugar (BS) 
 :The level of glucose in the blood, typically measured in milligrams per deciliter (mg/dL).
 
-Body Temperature (Body Temp)
+* Body Temperature (Body Temp)
 :The temperature of the body, usually measured in degrees Celsius (°C) or Fahrenheit (°F).
 
-Heart Rate (Heart Rate) 
+* Heart Rate (Heart Rate) 
 :The number of heart beats per minute.
 
-Risk Level (RiskLevel) 
+* Risk Level (RiskLevel) 
 :The classification of the expectant mother's health risk during pregnancy, often categorized into levels such as low, medium, and high risk.
 
 ## Process Overview
@@ -171,22 +171,8 @@ The high risk class has the best performance metrics in terms of precision and F
 
  
 
-Evaluating random_forest...
-Classification Report for random_forest:
-              precision    recall  f1-score   support
 
-   high risk       0.84      0.84      0.84        19
-    low risk       0.79      0.80      0.79        79
-    mid risk       0.79      0.78      0.78        63
 
-    accuracy                           0.80       161
-   macro avg       0.81      0.81      0.81       161
-weighted avg       0.80      0.80      0.80       161
-
-Confusion Matrix for random_forest:
-[[16  3  0]
- [ 3 63 13]
- [ 0 14 49]]
 
   
   
@@ -197,17 +183,7 @@ gamma: [1, 0.1, 0.01],
 
 kernel: ['linear', 'rbf']
 Perfomance metrics and classification report :
-                 
-                  precision  recall   f1-score   support
-
-   high risk       0.84      0.84      0.84        19
-    low risk       0.75      0.72      0.74        79
-    mid risk       0.71      0.75      0.73        63
-
-    accuracy                           0.75       161
-   macro avg       0.77      0.77      0.77       161
-weighted avg       0.75      0.75      0.75       161
-
+       
 High Risk: The model performs quite well in predicting high-risk instances with high precision and recall (both 0.84), indicating that high-risk cases are identified accurately and consistently.
 Low Risk: The model has moderate performance for low-risk instances with an F1-score of 0.74. The precision is slightly higher than recall, suggesting a slight tendency to overpredict low-risk cases.
 Mid Risk: The model has a somewhat lower precision but good recall for mid-risk instances. This indicates that while mid-risk cases are identified fairly well, the model might be more cautious or conservative in its predictions.
@@ -235,6 +211,16 @@ Overfitting: The high training score and lower cross-validation score suggest th
 Improvement with More Data: The cross-validation score improves as the number of training examples increases, indicating that the model benefits from more training data.
 
 Potential Ceiling: The plateau in the cross-validation score suggests a potential ceiling in model performance, which might indicate the need for model tuning or the addition of more informative features.
+
+## Future Scope
+* Collect More Data:Gather more diverse data to improve model generalization.
+* Data Augmentation: Use techniques to generate synthetic data if real data is not available.
+* Try Other Algorithms: Test other machine learning models (e.g., Gradient Boosting, XGBoost, LightGBM) to see if they perform better on the data.
+* Different Validation Strategies: Use different cross-validation strategies like StratifiedKFold  to get a better understanding of model performance.
+
+## Conclusion
+The current model provides a good starting point but may require further refinement to achieve optimal performance.Insights gained from feature importance and performance metrics can guide future data collection and feature engineering efforts.
+
 
 
  
