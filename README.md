@@ -145,9 +145,7 @@ min_samples_split [2, 5, 10]. Specifies the minimum number of samples required t
 min_samples_leaf [1, 2, 4]. Defines the minimum number of samples that a leaf node must have.
 The perfomance metrics and classification reports are as follows:
 
-
-![Capture des](https://github.com/user-attachments/assets/08703ad7-7d8d-4f66-95c6-7ed99acd8fee)
-
+![CaptureDES](https://github.com/user-attachments/assets/dcaa541f-28f9-463d-8459-568bef6d7d1a)
 
 
 The high risk class has the best performance metrics in terms of precision and F1-score, indicating that it is predicted with high accuracy and recall.The low risk and mid risk classes have lower precision and recall compared to the high-risk class, suggesting they are less accurately predicted.The accuracy of 0.70 shows that the model is correct 70% of the time overall.The macro average metrics suggest that the model has a balanced performance across different classes, but the weighted average indicates that performance is somewhat lower when accounting for class imbalance.Overall, the model performs better on the high-risk class compared to the other risk levels, and the F1-scores indicate a balance between precision and recall for each class.
@@ -163,8 +161,8 @@ The high risk class has the best performance metrics in terms of precision and F
     
   The perfomance metrics and classification report:
 
-  
-  ![Capture](https://github.com/user-attachments/assets/1920b975-47ca-4134-8488-46b2aa836be0)
+
+![CapturR](https://github.com/user-attachments/assets/10d2b4a8-98dd-48dc-99e7-5422866f6e35)
 
 
 The model performs quite well overall, with an accuracy of 80%.
