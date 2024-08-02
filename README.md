@@ -98,9 +98,8 @@ Standardization: apply standardization to all numerical variables.
 
 ![alt text](image-5.png)
 
-There is a strong positive relationship between systolic bp and diastolic bp
-Weak positive relationship between age and systolic bp,age and diastolic bp ,diastolic bp and body temperature
-Heart rate and blod sugar as well as body temperature
+* strong positive relationship between systolic bp and diastolic bp
+* Weak positive relationship between age and systolic bp,age and diastolic bp ,diastolic bp and body temperature Heart rate and blod sugar as well as body temperature
 
 ### Pairplot
 
